@@ -11,6 +11,10 @@ use Cake\Event\Event;
  */
 class UsersController extends AppController
 {
+    public $components = [
+        'Cookie'
+    ];
+
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
@@ -115,15 +119,34 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
+                $session_key = $this->Auth->setUser($user);
+                $this->Cookie->delete('NODEJS');
+                $this->Cookie->configKey('NODEJS', 'encryption', false);
+                $this->Cookie->write('NODEJS', $this->_getNodeSessionId());
+                //return $this->redirect($this->Auth->redirectUrl());
+                $this->Flash->success(__('You are logged in!'));
+            } else {
+                $this->Flash->error(__('Invalid username or password, try again'));
             }
-            $this->Flash->error(__('Invalid username or password, try again'));
+            $this->set('session_key', $session_key);
+            $this->set('user', $user);
+
         }
     }
 
     public function logout()
     {
         return $this->redirect($this->Auth->logout());
+    }
+
+    protected function _getNodeSessionId()
+    {
+        $id = $this->request->session()->id();
+
+        $signature = str_replace(
+            "=", "", base64_encode(hash_hmac('sha256', $id, \EXPRESS_SECRET, true))
+        );
+
+        return 's:' . $id . '.' . $signature;
     }
 }

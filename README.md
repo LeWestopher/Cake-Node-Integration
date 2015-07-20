@@ -1,24 +1,10 @@
-# CakePHP Application Skeleton
+&& # CakePHP && Node.js Integration
 
-[![Build Status](https://api.travis-ci.org/cakephp/app.png)](https://travis-ci.org/cakephp/app)
-[![License](https://poser.pugx.org/cakephp/app/license.svg)](https://packagist.org/packages/cakephp/app)
-
-A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.0.
-
-## Installation
-
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-```bash
-composer create-project --prefer-dist cakephp/app [app_name]
-```
-
-You should now be able to visit the path to where you installed the app and see
-the setup traffic lights.
-
-## Configuration
-
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
+1. Clone this repository into your apache2 document root.
+2. Download and install Redis.
+3. Make sure the php-redis extension is downloaded and set up.
+4. Make sure that php-intl is running on your web server.
+5. Turn on your Redis server under the same user as your apache2 instance 'sudo -u ${apache-user-here} redis-server'
+6. Navigate to http://localhost to make sure everything works.
+7. Check out the Node server I'm working with in doc_root/bin/NodeServer.js.
+8. Get the node server to recognize the NODEJS cookie.

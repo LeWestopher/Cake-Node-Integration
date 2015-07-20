@@ -11,3 +11,14 @@
     <?= $this->Form->button(__('Login')); ?>
     <?= $this->Form->end() ?>
 </div>
+<br><br><br>
+User:<br><br>
+<?php echo json_encode($user); ?>
+<br><br>
+Session Key:
+<?php echo $session_key; ?>
+<br><br>
+Session ID:
+<?php echo $this->request->session()->id(); ?>
+<br><br>
+<?php echo json_encode($this->request->session()->read('Auth.User')); ?>

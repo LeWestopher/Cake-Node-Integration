@@ -24,7 +24,8 @@ class NodeRedisEngine extends RedisEngine
             $prefix = vsprintf($this->_groupPrefix, $this->groups());
         }
 
-        //$key = preg_replace('/[\s]+/', '_', trim(str_replace([DS, '/'], '_', strval($key))));
+        $key = preg_replace('/[\s]+/', '_', trim(strval($key)));
         return $prefix . $key;
     }
 }
+

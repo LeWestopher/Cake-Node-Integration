@@ -127,16 +127,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.0.8",
+            "version": "3.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "29ca3d120c25d554ad5143adffdab0f76bc6c9b9"
+                "reference": "c215331d9576942304b927e6f7fd849a86a956da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/29ca3d120c25d554ad5143adffdab0f76bc6c9b9",
-                "reference": "29ca3d120c25d554ad5143adffdab0f76bc6c9b9",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/c215331d9576942304b927e6f7fd849a86a956da",
+                "reference": "c215331d9576942304b927e6f7fd849a86a956da",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-06-28 17:00:48"
+            "time": "2015-07-17 01:56:43"
         },
         {
             "name": "cakephp/migrations",
@@ -1012,16 +1012,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.5.1",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94"
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e5a46a767928e85f1f47dda654beda8c680ddd94",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/aaf8772ade08b5f0f6830774a5d5c2f800415975",
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975",
                 "shasum": ""
             },
             "require": {
@@ -1080,7 +1080,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-07-03 16:48:00"
+            "time": "2015-07-16 15:26:57"
         },
         {
             "name": "symfony/var-dumper",
