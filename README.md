@@ -1,4 +1,4 @@
-&& # CakePHP && Node.js Integration
+# CakePHP && Node.js Integration
 
 1. Clone this repository into your apache2 document root.
 2. Download and install Redis.
